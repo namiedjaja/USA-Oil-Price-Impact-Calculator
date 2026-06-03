@@ -44,3 +44,18 @@ if st.button("Calculate changes", type="primary"):
     ax.set_ylabel('Percentage Change')
 
     st.pyplot(fig)
+
+Tchange = abs(Ptransportation) + abs(Phealth) + abs(Pfood) + abs(Ppollution)
+
+if Tchange > 0:
+    Pietransportation = (abs(Ptransportation) / Tchange) * 100
+    Piehealth         = (abs(Phealth)         / Tchange) * 100
+    Piefood           = (abs(Pfood)            / Tchange) * 100
+    Piepollution      = (abs(Ppollution)       / Tchange) * 100
+
+    sizes  = [Pietransportation, Piehealth, Piefood, Piepollution]
+    labels = ['Transportation', 'Health', 'Food', 'Air Quality']
+
+    fig2, ax2 = plt.subplots()
+    ax2.pie(sizes, labels=labels, autopct='%1.1f%%')
+    ax2.set_title('Share 
