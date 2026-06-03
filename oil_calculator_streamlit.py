@@ -48,6 +48,7 @@ if st.button("Calculate changes", type="primary"):
     Tchange = abs(Ptransportation) + abs(Phealth) + abs(Pfood) + abs(Ppollution)
 
     if Tchange > 0:
+        st.divider()
         Pietransportation = (abs(Ptransportation) / Tchange) * 100
         Piehealth         = (abs(Phealth)         / Tchange) * 100
         Piefood           = (abs(Pfood)            / Tchange) * 100
@@ -57,6 +58,6 @@ if st.button("Calculate changes", type="primary"):
         labels = ['Transportation', 'Food', 'Air Quality', 'Health']
     
         fig2, ax2 = plt.subplots()
-        ax2.pie(sizes, labels=labels, autopct='%1.1f%%',colors=custom_colors)
+        ax2.pie(sizes, labels=labels, autopct='%1.1f%%',colors=custom_colors,textprops={'fontsize': 10})
         ax2.set_title('Share of Total Change by Sector')
         st.pyplot(fig2)
