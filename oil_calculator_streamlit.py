@@ -52,13 +52,9 @@ if st.button("Calculate changes", type="primary"):
         Pietransportation = round((abs(Ptransportation) / Tchange) * 100, 1)
         Piehealth = round((abs(Phealth)/ Tchange) * 100, 1)
         Piefood = round((abs(Pfood)/ Tchange) * 100, 1)
-        Piepollution = round((abs(Ppollution)/ Tchange) * 100, 1)
+        Piepollution = round(100 - Pietransportation - Piehealth - Piefood, 1)
 
-        if Pietransportation + Piehealth + Piefood + Piepollution == 99.9:
-            Piefood = Piefood + 0.1
-        elif Pietransportation + Piehealth + Piefood + Piepollution == 100.1:
-            Pietransportation = Pietransportation - 0.1
-    
+
         sizes  = [Pietransportation, Piefood, Piepollution,Piehealth]
         labels = ['Transportation', 'Food', 'Air Quality', 'Health']
     
