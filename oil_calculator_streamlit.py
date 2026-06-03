@@ -59,5 +59,5 @@ if st.button("Calculate changes", type="primary"):
     
         fig2, ax2 = plt.subplots()
         ax2.pie(sizes, labels=labels, autopct='%1.1f%%',colors=custom_colors,textprops={'fontsize': 8})
-        ax2.set_title('Share of Total Change by Sector')
+        ax2.set_title('Share of Total Change by Sector',fontsize=10)
         st.pyplot(fig2)
