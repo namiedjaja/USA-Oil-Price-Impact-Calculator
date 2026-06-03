@@ -9,12 +9,12 @@ st.caption("Current changes compared to January 2020 baselines")
 col1, col2 = st.columns(2)
 
 with col1:
-    transportation = st.number_input("Transportation Price Index", min_value=0.0, value=208.284, step=1, format="%.2f")
-    health = st.number_input("Health Care Price Index", min_value=0.0, value=511.458, step=1, format="%.2f")
+    transportation = st.number_input("Transportation Price Index", min_value=0.0, value=208.284, step=1.0, format="%.2f")
+    health = st.number_input("Health Care Price Index", min_value=0.0, value=511.458, step=1.0, format="%.2f")
 
 with col2:
-    food = st.number_input("Food Price Index", min_value=0.0, value=261.272, step=1, format="%.2f")
-    pollution = st.number_input("Air Quality Index", min_value=0.0, value=37.5, step=1, format="%.2f")
+    food = st.number_input("Food Price Index", min_value=0.0, value=261.272, step=1.0, format="%.2f")
+    pollution = st.number_input("Air Quality Index", min_value=0.0, value=37.5, step=1.0, format="%.2f")
 
 if st.button("Calculate changes", type="primary"):
 
