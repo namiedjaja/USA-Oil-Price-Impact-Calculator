@@ -30,7 +30,7 @@ if st.button("Calculate changes", type="primary"):
     m1.metric("Transportation", f"{'+' if Ptransportation > 0 else ''}{Ptransportation}%")
     m2.metric("Food",           f"{'+' if Pfood > 0 else ''}{Pfood}%")
     m3.metric("Health Care",    f"{'+' if Phealth > 0 else ''}{Phealth}%")
-    m4.metric("Air Quality",    f"{'+' if Ppollution > 0 else ''}{Ppollution}%")
+    m4.metric("Air Pollution",    f"{'+' if Ppollution > 0 else ''}{Ppollution}%")
 
     # --- your original chart code ---
     categories = ['Transportation \nPrice Index', 'Food \nPrice Index', 'Air Quality \nIndex', 'Health Care \nPrice Index']
