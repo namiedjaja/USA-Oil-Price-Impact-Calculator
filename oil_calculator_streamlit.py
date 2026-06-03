@@ -57,6 +57,6 @@ if st.button("Calculate changes", type="primary"):
         labels = ['Transportation', 'Food', 'Air Quality', 'Health']
     
         fig2, ax2 = plt.subplots()
-        ax2.pie(sizes, labels=labels, autopct='%1.1f%%',color=custom_colors)
+        ax2.pie(sizes, labels=labels, autopct='%1.1f%%',colors=custom_colors)
         ax2.set_title('Share of Total Change by Sector')
         st.pyplot(fig2)
