@@ -58,4 +58,5 @@ if Tchange > 0:
 
     fig2, ax2 = plt.subplots()
     ax2.pie(sizes, labels=labels, autopct='%1.1f%%')
-    ax2.set_title('Share 
+    ax2.set_title('Share of Total Change by Sector')
+    st.pyplot(fig2)
