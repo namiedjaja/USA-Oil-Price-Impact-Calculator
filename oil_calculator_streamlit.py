@@ -49,10 +49,10 @@ if st.button("Calculate changes", type="primary"):
 
     if Tchange > 0:
         st.divider()
-        Pietransportation = (abs(Ptransportation) / Tchange) * 100
-        Piehealth         = (abs(Phealth)         / Tchange) * 100
-        Piefood           = (abs(Pfood)            / Tchange) * 100
-        Piepollution      = (abs(Ppollution)       / Tchange) * 100
+        Pietransportation = round((abs(Ptransportation) / Tchange) * 100, 1)
+        Piehealth = round((abs(Phealth)/ Tchange) * 100, 1)
+        Piefood = round((abs(Pfood)/ Tchange) * 100, 1)
+        Piepollution = round((abs(Ppollution)/ Tchange) * 100, 1)
     
         sizes  = [Pietransportation, Piefood, Piepollution,Piehealth]
         labels = ['Transportation', 'Food', 'Air Quality', 'Health']
